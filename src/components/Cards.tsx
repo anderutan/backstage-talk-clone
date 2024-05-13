@@ -17,14 +17,14 @@ const Cards = ({ props, selectedPage, setSelectedPage }: CardsProps) => {
         <img
           src={props.coverImage}
           alt={props.item}
-          className='w-4/5 md:w-[420px] object-cover'
+          className='w-4/5 sm:w-[420px] lg:w-1/2 object-cover'
         />
       </motion.div>
 
       {props.isSoldOut ? (
         <>
           <p className='font-bold text-xl -mt-5'>{props.item} is sold out.</p>
-          <div className='text-center'>
+          <div className='text-center '>
             <p>
               If you are lucky, you may get the last pieces in{' '}
               <a href={props.store} style={{ color: props.secondColor }}>

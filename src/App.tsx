@@ -14,7 +14,9 @@ function App() {
     <div
       className={`px-5 py-7 ${
         selectedPage && bgColor(selectedPage)
-      } ease-in-out duration-[1500ms] relative scroll-container`}
+      } ease-in-out duration-[1500ms] relative ${
+        isAboveMediumScreens && 'scroll-container'
+      }`}
     >
       <div className=''>
         <img
@@ -26,7 +28,9 @@ function App() {
       {data.map((book) => (
         <div
           key={book.id}
-          className={`h-screen py-12 scroll-section `}
+          className={`h-screen py-12 ${
+            isAboveMediumScreens && 'scroll-section'
+          }`}
           id={book.id.toString()}
         >
           <Cards
@@ -36,7 +40,7 @@ function App() {
           />
         </div>
       ))}
-      <div className='mb-10 md:absolute lg:fixed md:left-5 md:bottom-7 md:w-[300px] md:mb-0'>
+      <div className='mb-10 md:absolute lg:fixed md:left-5 md:bottom-7 md:w-[200px] lg:w-[300px] md:mb-0'>
         <h2 className='text-center text-lg font-bold mb-2 md:text-left md:leading-6'>
           Backstage Talks is a magazine of casual, but in depth dialogues on
           design and business. Our decisions shape and influence this complex

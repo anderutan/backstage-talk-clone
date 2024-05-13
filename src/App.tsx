@@ -3,39 +3,18 @@ import { useState } from 'react';
 import Cards from './components/Cards';
 import useMediaQuery from './utils/useMediaQuery';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
 import data from './data';
-
-const bgColor = (num: number): string => {
-  switch (num) {
-    case 1:
-      return 'bg-red-700 text-black';
-    case 2:
-      return 'bg-blue-700 text-black';
-    case 3:
-      return 'bg-yellow-500 text-black';
-    case 4:
-      return 'bg-orange-600 text-black';
-    case 5:
-      return 'bg-teal-500 text-black';
-    case 6:
-      return 'bg-white';
-    case 7:
-      return 'bg-pink-500 text-black';
-    default:
-      return 'bg-white text-black';
-  }
-};
+import { bgColor } from './utils/bgColor';
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<number | null>(null);
+  const [selectedPage, setSelectedPage] = useState<number>(7);
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px');
 
   return (
     <div
       className={`px-5 py-7 ${
         selectedPage && bgColor(selectedPage)
-      } ease-in-out duration-[2000ms] relative`}
+      } ease-in-out duration-[1500ms] relative scroll-container`}
     >
       <div className=''>
         <img
@@ -47,7 +26,7 @@ function App() {
       {data.map((book) => (
         <div
           key={book.id}
-          className={`h-screen py-12  `}
+          className={`h-screen py-12 scroll-section `}
           id={book.id.toString()}
         >
           <Cards

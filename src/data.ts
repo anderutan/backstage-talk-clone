@@ -1,4 +1,4 @@
-import { DataFormat } from './types';
+import { DataFormat } from './utils/types';
 import image7 from './assets/backstagetalks_cover_issue_7.png';
 import image6 from './assets/backstagetalks_cover_issue_6.png';
 import image5 from './assets/backstagetalks_cover_issue_5.png';
@@ -10,7 +10,7 @@ import image1 from './assets/backstagetalks_cover_issue_1.png';
 const data: DataFormat[] = [
   {
     id: 7,
-    item: 'Issue 7',
+    item: 'Issue # 7',
     purchaseLinkEurope: 'https://brot.sk/products/backstage-talks-issue-7',
     purchaseLinkUK:
       'https://www.newsstand.co.uk/196-business-and-finance-magazines/33211-subscribe-to-backstage-talks-magazine-subscription.aspx',
@@ -22,7 +22,7 @@ const data: DataFormat[] = [
   },
   {
     id: 6,
-    item: 'Issue 6',
+    item: 'Issue # 6',
     purchaseLinkEurope:
       'https://brot.sk/products/backstage-talks-issue-6?_pos=2&_sid=1c5730cc8&_ss=r',
     purchaseLinkUK: '',
@@ -34,7 +34,7 @@ const data: DataFormat[] = [
   },
   {
     id: 5,
-    item: 'Issue 5',
+    item: 'Issue # 5',
     purchaseLinkEurope:
       'https://brot.sk/products/backstage-talks-5?_pos=3&_sid=1c5730cc8&_ss=r',
     purchaseLinkUK: '',
@@ -46,7 +46,7 @@ const data: DataFormat[] = [
   },
   {
     id: 4,
-    item: 'Issue 4',
+    item: 'Issue # 4',
     purchaseLinkEurope: '',
     purchaseLinkUK: '',
     store: 'https://backstagetalks.com/stocklist.php',
@@ -57,7 +57,7 @@ const data: DataFormat[] = [
   },
   {
     id: 3,
-    item: 'Issue 3',
+    item: 'Issue # 3',
     purchaseLinkEurope: 'https://brot.sk/?_pos=4&_sid=1c5730cc8&_ss=r',
     purchaseLinkUK: '',
     store: 'https://backstagetalks.com/stocklist.php',
@@ -68,7 +68,7 @@ const data: DataFormat[] = [
   },
   {
     id: 2,
-    item: 'Issue 2',
+    item: 'Issue # 2',
     purchaseLinkEurope:
       'https://brot.sk/products/backstage-talks-2?_pos=1&_sid=1c5730cc8&_ss=r',
     purchaseLinkUK: '',
@@ -80,7 +80,7 @@ const data: DataFormat[] = [
   },
   {
     id: 1,
-    item: 'Issue 1',
+    item: 'Issue # 1',
     purchaseLinkEurope: '',
     purchaseLinkUK: '',
     store: 'https://backstagetalks.com/stocklist.php',

@@ -1,9 +1,9 @@
-import { DataFormat } from '../types';
+import { DataFormat } from '../utils/types';
 import { motion } from 'framer-motion';
 
 type CardsProps = {
   props: DataFormat;
-  selectedPage: number;
+  selectedPage: number | null;
   setSelectedPage: (value: number) => void;
 };
 
@@ -17,7 +17,7 @@ const Cards = ({ props, selectedPage, setSelectedPage }: CardsProps) => {
         <img
           src={props.coverImage}
           alt={props.item}
-          className='w-4/5 md:min-w-4/5 max-w-[420px] h-full object-cover'
+          className='w-4/5 md:w-[420px] object-cover'
         />
       </motion.div>
 
@@ -42,7 +42,12 @@ const Cards = ({ props, selectedPage, setSelectedPage }: CardsProps) => {
                 <p>
                   <a
                     href={props.purchaseLinkEurope}
-                    style={{ color: props.secondColor }}
+                    style={{
+                      color:
+                        selectedPage === props.id
+                          ? props.secondColor
+                          : props.mainColor,
+                    }}
                   >
                     BUY HERE
                   </a>{' '}
@@ -51,7 +56,12 @@ const Cards = ({ props, selectedPage, setSelectedPage }: CardsProps) => {
                 <p>
                   <a
                     href={props.purchaseLinkUK}
-                    style={{ color: props.secondColor }}
+                    style={{
+                      color:
+                        selectedPage === props.id
+                          ? props.secondColor
+                          : props.mainColor,
+                    }}
                   >
                     BUY HERE
                   </a>{' '}
@@ -61,7 +71,12 @@ const Cards = ({ props, selectedPage, setSelectedPage }: CardsProps) => {
             ) : (
               <a
                 href={props.purchaseLinkEurope}
-                cstyle={{ color: props.secondColor }}
+                style={{
+                  color:
+                    selectedPage === props.id
+                      ? props.secondColor
+                      : props.mainColor,
+                }}
               >
                 BUY HERE
               </a>
@@ -69,7 +84,15 @@ const Cards = ({ props, selectedPage, setSelectedPage }: CardsProps) => {
           </div>
           <p>
             or in{' '}
-            <a href={props.store} style={{ color: props.secondColor }}>
+            <a
+              href={props.store}
+              style={{
+                color:
+                  selectedPage === props.id
+                    ? props.secondColor
+                    : props.mainColor,
+              }}
+            >
               selected stores
             </a>
           </p>
